@@ -1,38 +1,20 @@
-<section class="phx-hero">
-  <h1>My Phrenzy Entry</h1>
-  <p><%= link "This clock", to: Routes.live_path(@conn, LiveViewDemoWeb.ClockLive) %> is a basic live view in action.</p>
-</section>
-
-<section class="row">
-  <article class="column">
-    <h2>Resources</h2>
-    <ul>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix_live_view">Phoenix LiveView README</a>
-      </li>
-      <li>
-        <a href="https://hexdocs.pm/phoenix/overview.html">Phoenix Guides &amp; Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Phoenix Source</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix/blob/v1.4/CHANGELOG.md">Phoenix v1.4 Changelog</a>
-      </li>
-    </ul>
-  </article>
-  <article class="column">
-    <h2>Help</h2>
-    <ul>
-      <li>
-        <a href="https://elixirforum.com/c/phoenix-forum">Forum</a>
-      </li>
-      <li>
-        <a href="https://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on Freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">Twitter @elixirphoenix</a>
-      </li>
-    </ul>
-  </article>
-</section>
+<div class="container mx-auto flex flex-col md:flex-row items-center my-12 md:my-24">
+  <!--Left Col-->
+  <div class="flex flex-col w-full lg:w-1/2 justify-center items-start pt-12 pb-24 px-6">
+    <p class="uppercase tracking-loose">Enter the game</p>
+    <h1 class="font-bold text-4xl my-4">In search for magic Elixir</h1>
+    <p class="leading-normal mb-4">
+      Begin the adventure! Dive into a game where your goal is to find a stolen vial of magic elixir. This is a very important task!
+    </p>
+    <button class="bg-bluish hover:bg-lighty text-lighty hover:text-bluish rounded shadow hover:shadow-lg py-2 px-4 border border-lighty hover:border-bluish">
+      <%= link "Start game", to: Routes.live_path(@conn, LiveViewDemoWeb.ClockLive) %>
+    </button>
+  </div>
+  <!--Right Col-->
+  <div class="w-full lg:w-1/2 lg:py-6 text-center">
+    <!--Add your product image here-->
+    <img class="fill-current text-gray-900 w-3/5 mx-auto" 
+          style="transform: rotate(<%= :rand.uniform(40) - 20 %>deg)" 
+          src="<%= Routes.static_path(@conn, "/images/brew.png") %>">
+  </div>  
+</div>
