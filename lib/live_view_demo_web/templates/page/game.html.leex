@@ -1,15 +1,15 @@
 <div class="flex md:flex-row-reverse flex-wrap">
 		
 <!--Main Content-->
-    <div class="w-full md:w-4/5 fixed bottom-0 h-screen">
+    <div class="w-full md:w-4/5 fixed bottom-0 h-screen overflow-auto">
       <div class="container pt-16 px-6 max-w-3xl">
           <section class="story mb-10 text-lg lg:text-xl text-justify">
-            <%= @state.current_scene["body"] %>
+            <%= @state.current_scene["body"]  |> Earmark.as_html! |> raw  %>
           </section>
-          <section class="exits flex">
+          <section class="exits flex flex-wrap md:mb-8 mb-30">
             <%= if @state.current_scene["exits"] do %>
                 <%= for choice <- @state.current_scene["exits"] do %>
-                    <div class="w-full md:w-1/2 px-6">
+                    <div class="w-full md:w-1/2 px-6 mb-3">
                         <button class="hover:bg-bluish bg-lighty hover:text-lighty text-bluish rounded shadow hover:shadow-lg py-2 px-4 border border-lighty hover:border-bluish w-full"
                             phx-click="choose" phx-value="<%= choice["to"] %>">
                             <%= choice["title"] %>
@@ -27,9 +27,9 @@
     </div>
 
 <!--Sidebar-->
-    <div class="w-full md:w-1/5 bg-bluish px-2 text-center fixed bottom-0 md:pt-8 md:top-0 md:left-0 h-16 md:h-screen md:border-r-4 md:border-gray-600">
+    <div class="w-full md:w-1/5 bg-bluish px-2 mt-0 text-center fixed bottom-0 md:pt-8 md:top-0 md:left-0 h-16 md:h-screen md:border-r-4 md:border-gray-600">
         <div class="md:relative mx-auto lg:float-right lg:px-6">
-            <h2 class="invisible md:visible text-lighty text-3xl md:pb-10 text-left">Stats:</h2>
+            <h2 class="invisible h-0 md:h-auto md:visible text-lighty text-3xl md:pb-10 text-left">Stats:</h2>
             <ul class="list-reset flex flex-row md:flex-col text-center md:text-left text-lighty lg:text-2xl">
             <li class="mr-3 flex-1">
                 Health: <%= @state.stats[:health] %>

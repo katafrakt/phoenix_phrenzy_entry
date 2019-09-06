@@ -60,3 +60,8 @@
   * @import "utilities/background-patterns";
   * @import "utilities/skew-transforms";
   */
+
+  section.story p {
+    text-indent: 1rem;
+    padding-bottom: 1rem;
+  }
