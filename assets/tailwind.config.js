@@ -6,6 +6,10 @@ module.exports = {
         bluish: '#171738',
         bground: '#CBD4C2'
       }
+    },
+    fontFamily: {
+      'display': ['Oswald'],
+      'sans': ['sans-serif'],
     }
   },
   variants: {},

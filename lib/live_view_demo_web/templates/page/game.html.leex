@@ -1,0 +1,45 @@
+<div class="flex md:flex-row-reverse flex-wrap">
+		
+<!--Main Content-->
+    <div class="w-full md:w-4/5 fixed bottom-0 h-screen">
+      <div class="container pt-16 px-6 max-w-3xl">
+          <section class="story mb-10 text-lg lg:text-xl text-justify">
+            <%= @state.current_scene["body"] %>
+          </section>
+          <section class="exits flex">
+            <%= if @state.current_scene["exits"] do %>
+                <%= for choice <- @state.current_scene["exits"] do %>
+                    <div class="w-full md:w-1/2 px-6">
+                        <button class="hover:bg-bluish bg-lighty hover:text-lighty text-bluish rounded shadow hover:shadow-lg py-2 px-4 border border-lighty hover:border-bluish w-full"
+                            phx-click="choose" phx-value="<%= choice["to"] %>">
+                            <%= choice["title"] %>
+                        </button>
+                    </div>
+                <% end %>
+            <% else %>
+                <button class="hover:bg-bluish bg-lighty hover:text-lighty text-bluish rounded shadow hover:shadow-lg py-2 px-4 border border-lighty hover:border-bluish w-full"
+                        phx-click="start-over" phx-disable="true">
+                    Start over!
+                </button>
+            <% end %>
+          </section>
+      </div>
+    </div>
+
+<!--Sidebar-->
+    <div class="w-full md:w-1/5 bg-bluish px-2 text-center fixed bottom-0 md:pt-8 md:top-0 md:left-0 h-16 md:h-screen md:border-r-4 md:border-gray-600">
+        <div class="md:relative mx-auto lg:float-right lg:px-6">
+            <h2 class="invisible md:visible text-lighty text-3xl md:pb-10 text-left">Stats:</h2>
+            <ul class="list-reset flex flex-row md:flex-col text-center md:text-left text-lighty lg:text-2xl">
+            <li class="mr-3 flex-1">
+                Health: <%= @state.stats[:health] %>
+            </li>
+            <li class="mr-3 flex-1">
+                <p class="block py-1 md:py-3 pl-1 align-middle text-lighty no-underline">
+                Sanity: <%= @state.stats[:sanity] %>
+                </p>
+            </li>
+            </ul>
+        </div>
+    </div>
+</div>

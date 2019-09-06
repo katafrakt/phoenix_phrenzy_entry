@@ -2,12 +2,12 @@
   <!--Left Col-->
   <div class="flex flex-col w-full lg:w-1/2 justify-center items-start pt-12 pb-24 px-6">
     <p class="uppercase tracking-loose">Enter the game</p>
-    <h1 class="font-bold text-4xl my-4">In search for magic Elixir</h1>
+    <h1 class="font-bold text-4xl my-4">The Lost Elixir</h1>
     <p class="leading-normal mb-4">
       Begin the adventure! Dive into a game where your goal is to find a stolen vial of magic elixir. This is a very important task!
     </p>
     <button class="bg-bluish hover:bg-lighty text-lighty hover:text-bluish rounded shadow hover:shadow-lg py-2 px-4 border border-lighty hover:border-bluish">
-      <%= link "Start game", to: Routes.live_path(@conn, LiveViewDemoWeb.ClockLive) %>
+      <%= link "Start game", to: Routes.live_path(@conn, LiveViewDemoWeb.GameLive) %>
     </button>
   </div>
   <!--Right Col-->

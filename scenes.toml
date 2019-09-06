@@ -1,0 +1,20 @@
+root = "start"
+
+[start]
+body = """
+You are standing on the road going down to a small serene village down in the valley. This is your destination. Someone told you that the stolen elixir might be somewhere here...
+"""
+
+  [[start.exits]]
+  title = "Go to the village"
+  to = "village_entrance"
+
+  [[start.exits]]
+  title = "Contemplate on your mission"
+  to = "mission_contemplation"
+
+[village_entrance]
+body = "Where the first home of the village stands, there is..."
+
+[mission_contemplation]
+body = "You are conducting a mission for the king!"
