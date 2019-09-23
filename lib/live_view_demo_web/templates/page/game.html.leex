@@ -6,7 +6,7 @@
           <section class="story mb-10 text-lg lg:text-xl text-justify">
             <%= @state.current_scene["body"]  |> Earmark.as_html! |> raw  %>
           </section>
-          <section class="exits flex flex-wrap md:mb-8 mb-30">
+          <section class="exits flex flex-wrap md:mb-8 mb-32">
             <%= if @state.current_scene["exits"] do %>
                 <%= for choice <- @state.current_scene["exits"] do %>
                     <div class="w-full md:w-1/2 px-6 mb-3">

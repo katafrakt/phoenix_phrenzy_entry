@@ -1,0 +1,35 @@
+root: start
+
+start:
+  body: >
+    You are standing on the road going down to a small serene village down in the valley. This is your destination. Someone told you that the stolen elixir might be somewhere here...
+  exits:
+  -
+    title: Go to the village
+    to: village_entrance
+  -
+    title: Contemplate on your mission
+    to: mission_contemplation
+
+village_entrance:
+  body: Where the first home of the village stands, there is...
+
+mission_contemplation:
+  body: >
+    You are conducting a mission for the king!
+
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus finibus porta. Sed volutpat interdum sodales. Phasellus vulputate nisl at quam finibus accumsan. Quisque at finibus turpis, id luctus arcu. Mauris fringilla eu elit sit amet malesuada. Morbi tempus, risus at laoreet molestie, dui urna consectetur dui, quis dignissim dui enim sed arcu. Sed magna velit, vehicula in ante quis, hendrerit scelerisque mi. Praesent cursus nulla nibh, in cursus dui laoreet at. Proin quis semper ante.
+
+
+    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In fringilla urna nisl, ut euismod ipsum fringilla a. Proin blandit blandit lectus sed pretium. Sed eget odio rutrum, placerat enim id, laoreet est. Nullam efficitur orci sit amet elit sollicitudin laoreet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec semper urna sed neque suscipit, ut dignissim ipsum luctus.
+
+
+    Praesent sollicitudin dui a enim dapibus dapibus. Suspendisse nec est rutrum, tempor ipsum id, gravida urna. Morbi ultricies felis tellus, non auctor urna rutrum eu. Etiam mattis neque vel venenatis scelerisque. Mauris euismod, enim ac ultricies mollis, ipsum arcu varius neque, non auctor ex lectus ac diam. Curabitur in nisl quis arcu fringilla aliquam a in quam. Duis fringilla nisi libero, nec euismod enim euismod a. Ut euismod orci nec libero pretium porta. Etiam dignissim mi suscipit, rutrum leo sit amet, ornare tortor. Donec eget ipsum vitae ex pharetra ultricies a pretium nisi. Aliquam a lorem nec justo pulvinar scelerisque.
+
+    
+    Curabitur convallis ultricies feugiat. Phasellus fermentum justo vitae nisl viverra tempus id sit amet ante. Integer suscipit purus lectus, in consequat ipsum vestibulum et. Phasellus mollis ligula non ex ornare imperdiet. Maecenas sed magna sapien. Proin scelerisque libero vitae libero sodales, ac elementum urna lacinia. Suspendisse eget odio est. Suspendisse ut suscipit augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas leo nunc, tempus nec fringilla at, ornare non nibh. Pellentesque pellentesque eu augue nec dictum. Sed aliquam nec turpis ut auctor.
+  exits:
+  -
+    title: Go to the village
+    to: village_entrance

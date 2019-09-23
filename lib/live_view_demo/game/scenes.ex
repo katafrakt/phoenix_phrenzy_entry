@@ -1,7 +1,7 @@
 defmodule LiveViewDemo.Game.Scenes do
   def load() do
-    file = "scenes.toml"
-    {:ok, content} = Toml.decode_file(file)
-    content
+    file = "scenes.yml"
+    {:ok, content} = YamlElixir.read_from_file(file)
+    content |> IO.inspect
   end
 end
